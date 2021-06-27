@@ -19,7 +19,7 @@ def generate_random_metric():
         value = random.randint(4,5)
     else:
         value = random.randint(6,7)
-    payload = {'collector': collectorValue,'metricType': metricType,'value': str(value)}
+    payload = {'location': os.environ['LOCATION'], 'collector': os.environ['COLLECTOR'],'metricType': metricType,'value': str(value)}
     return payload      
 
 def send_metric():
