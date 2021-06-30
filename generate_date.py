@@ -12,13 +12,13 @@ def generate_random_metric():
     metricType = random.choice(metricTypeString)
 
     if metricType == 'Luminosity':
-        value = random.randint(0,1)
+        value = random.randint(20,80)
     elif metricType == 'Temperature':
-        value = random.randint(2,3)
+        value = random.randint(15,35)
     elif metricType == 'Humidity':
-        value = random.randint(4,5)
+        value = random.randint(10,80)
     else:
-        value = random.randint(6,7)
+        value = random.randint(40,70)
     payload = {'location': os.environ['LOCATION'], 'collector': os.environ['COLLECTOR'],'metricType': metricType,'value': str(value)}
     return payload      
 
